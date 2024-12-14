@@ -244,13 +244,9 @@ a:hover {
   #switch {
     padding-left: 3vw;
     margin-bottom: 2vw;
-  }
-  .switched {
-    border: 2px solid rgb(41, 101, 41);
-    border-radius: 50px;
-    padding: 1px;
-    margin-left: 7px;
-    border-bottom: 2px;
-    margin-bottom: 2vw;
+    padding: 10px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    margin-left: 2px;
   }
 }
