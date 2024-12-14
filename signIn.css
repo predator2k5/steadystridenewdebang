@@ -135,8 +135,6 @@ a:hover {
 #password1{
   margin-bottom: 20px;
 }
-
-}
 @media screen and (max-width: 915px) {
   body {
     width: 100vw;
