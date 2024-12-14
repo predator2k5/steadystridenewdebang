@@ -244,11 +244,4 @@ a:hover {
   #switch {
     padding-left: 3vw;
   }
-  .switched {
-    border: none;
-    border-radius: 50px;
-    padding: 10px;
-    margin-left: 7px;
-  
-  }
 }
