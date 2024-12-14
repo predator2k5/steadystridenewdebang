@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parkinson's Disease Prediction</title>
+    <link rel="stylesheet" href="output2.css"> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: url('./homescreen.png') no-repeat center center fixed;
+            background-size: cover;
+            position: relative;
+        }
+
+        /* Overlay for background */
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(255, 255, 255, 0.8);
+            z-index: 1;
+        }
+
+        
+
+        /* Centered form container */
+        .form-container {
+            position: relative;
+            z-index: 2;
+            max-width: 500px;
+            margin: 5rem auto;
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        /* Form heading */
+        .form-container h2 {
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: #2f855a;
+            margin-bottom: 1rem;
+        }
+
+        /* Form fields styling */
+        .form-container label {
+            display: block;
+            text-align: left;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            color: #4a5568;
+        }
+
+        .form-container input,
+        .form-container select {
+            width: 100%;
+            padding: 0.75rem;
+            margin-bottom: 1rem;
+            border: 1px solid #e2e8f0;
+            border-radius: 8px;
+            font-size: 1rem;
+        }
+
+        .form-container button {
+            background: #2f855a;
+            color: white;
+            padding: 0.75rem 1.5rem;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 1rem;
+        }
+
+        .form-container button:hover {
+            background: #276749;
+        }
+    </style>
+</head>
+<body>
+    <!-- Background -->
+
+    <div class="w-full h-20 border-b-2 border-green-400 relative">
+        <ul class="flex flex-row justify-evenly items-center">
+            <li class="p-7 font-semibold text-green-800">
+                <a class="hover:bg-green-900 hover:text-green-400 hover:rounded-xl p-3 transition-colors duration-[0.4s] transition-all" href="home.html">Home</a>
+            </li>
+            <li class="p-7 font-semibold text-green-800">
+                <a class="hover:bg-green-900 hover:text-green-400 hover:rounded-xl p-3 transition-colors duration-[0.4s] transition-all" href="about.html">About Us</a>
+            </li>
+            <li class="p-7 font-semibold text-green-800">
+                <a class="hover:bg-green-900 hover:text-green-400 hover:rounded-xl p-3 transition-colors duration-[0.4s] transition-all" href="#">Connect</a>
+            </li>
+            <h1 class="bg-gradient-to-r from-green-900 to-green-700 bg-clip-text p-5 text-3xl font-bold text-transparent">
+                SteadyStride
+            </h1>
+            <li class="p-7 font-semibold text-green-800">
+                <a class="hover:bg-green-900 hover:text-green-400 hover:rounded-xl p-3 transition-colors duration-[0.4s] transition-all" href="report.html">Report</a>
+            </li>
+            <li class="p-7 font-semibold text-green-800">
+                <a class="hover:bg-green-900 hover:text-green-400 hover:rounded-xl p-3 transition-colors duration-[0.4s] transition-all" href="home.html#contactUs">Contact Us</a>
+            </li>
+            <li class="p-7 font-semibold text-green-800">
+                <a class="hover:bg-green-900 hover:text-green-400 hover:rounded-xl p-3 transition-colors duration-[0.4s] transition-all" href="register.html">Logout</a>
+            </li>
+        </ul>
+    </div>
+
+    <!-- Form container -->
+    <div class="form-container">
+        <h2>Parkinson's Disease Prediction Survey</h2>
+        <form id="parkinsonsForm" onsubmit="return false;">
+            <div>
+                <label for="tremor">Tremor:</label>
+                <select id="tremor" name="tremor" required>
+                    <option value="">Choose...</option>
+                    <option value="1">Yes</option>
+                    <option value="0">No</option>
+                </select>
+            </div>
+            <div>
+                <label for="slowness">Slowness:</label>
+                <select id="slowness" name="slowness" required>
+                    <option value="">Choose...</option>
+                    <option value="1">Yes</option>
+                    <option value="0">No</option>
+                </select>
+            </div>
+            <div>
+                <label for="rigidity">Rigidity:</label>
+                <select id="rigidity" name="rigidity" required>
+                    <option value="">Choose...</option>
+                    <option value="1">Yes</option>
+                    <option value="0">No</option>
+                </select>
+            </div>
+            <div>
+                <label for="lossOfSmell">Loss of Smell:</label>
+                <select id="lossOfSmell" name="lossOfSmell" required>
+                    <option value="">Choose...</option>
+                    <option value="1">Yes</option>
+                    <option value="0">No</option>
+                </select>
+            </div>
+            <div>
+                <label for="familyHistory">Family History:</label>
+                <select id="familyHistory" name="familyHistory" required>
+                    <option value="">Choose...</option>
+                    <option value="1">Yes</option>
+                    <option value="0">No</option>
+                </select>
+            </div>
+            <div>
+                <label for="numAncestors">Number of Ancestors with Parkinson's:</label>
+                <input type="number" id="numAncestors" name="numAncestors" min="0" max="5" placeholder="Enter a number" required>
+            </div>
+            <div>
+                <label for="numMaleAncestors">Number of Male Ancestors:</label>
+                <input type="number" id="numMaleAncestors" name="numMaleAncestors" min="0" max="5" placeholder="Enter a number" required>
+            </div>
+            <div>
+                <label for="pastHeadInjury">Past Severe Head Injury:</label>
+                <select id="pastHeadInjury" name="pastHeadInjury" required>
+                    <option value="">Choose...</option>
+                    <option value="1">Yes</option>
+                    <option value="0">No</option>
+                </select>
+            </div>
+            <button type="button" onclick="submitForm()">Submit</button>
+        </form>
+    </div>
+
+    <script>
+        async function submitForm() {
+            const form = document.getElementById("parkinsonsForm");
+
+            if (!form.checkValidity()) {
+                form.reportValidity();
+                return;
+            }
+
+            const numAncestors = document.getElementById("numAncestors").value;
+            const numMaleAncestors = document.getElementById("numMaleAncestors").value;
+
+            if (parseInt(numAncestors) > 5 || parseInt(numMaleAncestors) > 5) {
+                alert("The number of ancestors or male ancestors cannot be greater than 5.");
+                return;
+            }
+
+            alert("Form submitted successfully!");
+        }
+    </script>
+</body>
+</html>
